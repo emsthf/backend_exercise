@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+            <tr>
+                <th>no</th>
+                <th>name</th>
+                <th>price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- thymleaf 사용. 내용에 th에 적힌 것이 들어오게 됨 -->
+            <tr th:each="product : ${product}">
+                <td th:text="${product.id}"></td>    <!-- text형식의 member의 id값이 들어옴 -->
+                <td th:text="${product.name}"></td>   <!-- text형식의 member의 name값이 들어옴 -->
+                <td th:text="${product.price}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -21,9 +21,10 @@ public class MemberService {
     }
 
     // 회원 등록
-    public int join(Member member) {   // join 메소드는 Member형 파라미터를 받고 int형으로 리턴한다
+    public int addMember(Member member) {   // join 메소드는 Member형 파라미터를 받고 int형으로 리턴한다
         validateDuplicateMember(member);   // 아래에서 만든 중복 이름 검사 메소드를 실행하고 같은 이름이 없으면
         memberRepository.save(member);     // 레포지토리에 저장하는 과정 실행
+        System.out.println("member = " + member);
         return member.getId();
     }
 

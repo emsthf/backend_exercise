@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <!-- 액션은 이 주소값으로 넘기겠다는 뜻. 넘기는 방식은 post -->
+            <form action="/members/new" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Input your name">
+                <button type="submit">SignUp</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
