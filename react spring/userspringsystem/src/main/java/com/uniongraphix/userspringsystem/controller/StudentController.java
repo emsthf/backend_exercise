@@ -15,14 +15,14 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    // 서버에 넘겨주는 부분
+    // 서버에 저장(서버에 넘겨주는 부분)
     @PostMapping("/add")
     public String add(@RequestBody Student student) {
         studentService.saveStudent(student);
         return "New Student id added.";
     }
 
-    // 프론트에 넘겨주는 부분
+    // 서버에서 데이터 읽어오기(프론트에 넘겨주는 부분)
     @GetMapping("/getAll")
     public List<Student> list() {
         return studentService.getAllStudents();
